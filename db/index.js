@@ -20,13 +20,9 @@ const Book = mongoose.model("Book", bookSchema);
 
 const createBook = (Booktitle, done) => {
   bookDoc = new Book({ title: Booktitle });
-  findBookByTitle(Booktitle, (err, data) => {
+  bookDoc.save((err, data) => {
     if (err) return done(err);
-    if (data) return done(null, data);
-    bookDoc.save((err, data) => {
-      if (err) return done(err);
-      return done(null, data);
-    });
+    return done(null, data);
   });
 };
 
