@@ -4,16 +4,18 @@
   "description": "boilerplate",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "mocha --timeout 5000 --recursive --exit --ui tdd tests/"
+    "start": "node server.js"
   },
   "dependencies": {
+    "express": "^4.14.0",
+    "cors": "^2.8.1",
+    "body-parser": "^1.15.2",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
-    "cors": "^2.8.1",
+    "mongodb": "^3.6.2",
+    "zombie": "^5.0.5",
+    "mocha": "^3.2.0",
     "dotenv": "^8.2.0",
-    "express": "^4.14.0",
-    "mocha": "^8.4.0",
     "mongoose": "^5.12.14"
   },
   "repository": {
